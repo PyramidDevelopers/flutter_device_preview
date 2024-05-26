@@ -28,6 +28,7 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
           primaryColor: accentColor,
           primaryColorDark: accentColor,
           indicatorColor: accentColor,
+          toggleableActiveColor: accentColor,
           highlightColor: accentColor.withOpacity(0.1),
           sliderTheme: base.sliderTheme.copyWith(
             thumbColor: accentColor,
@@ -36,48 +37,6 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
             activeTickMarkColor: accentColor,
             inactiveTickMarkColor: accentColor,
             overlayColor: accentColor.withOpacity(0.12),
-          ),
-          checkboxTheme: CheckboxThemeData(
-            fillColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
-              if (states.contains(WidgetState.disabled)) {
-                return null;
-              }
-              if (states.contains(WidgetState.selected)) {
-                return accentColor;
-              }
-              return null;
-            }),
-          ),
-          radioTheme: RadioThemeData(
-            fillColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
-              if (states.contains(WidgetState.disabled)) {
-                return null;
-              }
-              if (states.contains(WidgetState.selected)) {
-                return accentColor;
-              }
-              return null;
-            }),
-          ),
-          switchTheme: SwitchThemeData(
-            thumbColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
-              if (states.contains(WidgetState.disabled)) {
-                return null;
-              }
-              if (states.contains(WidgetState.selected)) {
-                return accentColor;
-              }
-              return null;
-            }),
-            trackColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
-              if (states.contains(WidgetState.disabled)) {
-                return null;
-              }
-              if (states.contains(WidgetState.selected)) {
-                return accentColor;
-              }
-              return null;
-            }),
           ),
         );
       case DevicePreviewToolBarThemeData.light:
@@ -92,6 +51,7 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
           primaryColor: accentColor,
           primaryColorDark: accentColor,
           indicatorColor: accentColor,
+          toggleableActiveColor: accentColor,
           highlightColor: accentColor,
           appBarTheme: base.appBarTheme.copyWith(
             color: barColor,
@@ -103,48 +63,6 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
             activeTickMarkColor: accentColor,
             inactiveTickMarkColor: accentColor,
             overlayColor: accentColor.withOpacity(0.12),
-          ),
-          checkboxTheme: CheckboxThemeData(
-            fillColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
-              if (states.contains(WidgetState.disabled)) {
-                return null;
-              }
-              if (states.contains(WidgetState.selected)) {
-                return accentColor;
-              }
-              return null;
-            }),
-          ),
-          radioTheme: RadioThemeData(
-            fillColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
-              if (states.contains(WidgetState.disabled)) {
-                return null;
-              }
-              if (states.contains(WidgetState.selected)) {
-                return accentColor;
-              }
-              return null;
-            }),
-          ),
-          switchTheme: SwitchThemeData(
-            thumbColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
-              if (states.contains(WidgetState.disabled)) {
-                return null;
-              }
-              if (states.contains(WidgetState.selected)) {
-                return accentColor;
-              }
-              return null;
-            }),
-            trackColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
-              if (states.contains(WidgetState.disabled)) {
-                return null;
-              }
-              if (states.contains(WidgetState.selected)) {
-                return accentColor;
-              }
-              return null;
-            }),
           ),
         );
     }
